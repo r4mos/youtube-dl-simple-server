@@ -4,8 +4,9 @@ youtube-dl-simple-server - download videos from some video platforms via http re
 **youtube-dl-simple-server** [OPTIONS]
 
 # REQUIEREMENTS
-  Linux platform (for now)
-  python 2.7. I haven't tested on other versions (for now)
+Linux platform (for now)
+
+python 2.7. I haven't tested on other versions (for now)
 
 # DESCRIPTION
 It is a HTTP server that responds GET requests like:
@@ -16,13 +17,16 @@ If video's URL works with youtube-dl, displays a button for starting download. I
 This server is designed to work with one browser plugin for users.
 
 # OPTIONS
-  -h, --help     show this help message and exit
-  -v, --version  show program's version number and exit
-  --verbose      show what the program is doing
+-h, --help     show this help message and exit
+
+-v, --version  show program's version number and exit
+
+--verbose      show what the program is doing
 
 
 # LINKS
 [youtube-dl](https://github.com/rg3/youtube-dl)
+
 [youtube-dl-simple-server](https://github.com/r4mos/youtube-dl-simple-server)
 
 # LICENSE
