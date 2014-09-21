@@ -20,6 +20,11 @@ This server is designed to work with one browser plugin for users.
   -v, --version  show program's version number and exit
   --verbose      show what the program is doing
 
+
+# LINKS
+[youtube-dl](https://github.com/rg3/youtube-dl)
+[youtube-dl-simple-server](https://github.com/r4mos/youtube-dl-simple-server)
+
 # LICENSE
 The MIT License
 
