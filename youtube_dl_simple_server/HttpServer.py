@@ -42,12 +42,10 @@ class HttpServerHandler (BaseHTTPRequestHandler):
         else:
             output  = "Download videos from some video platforms via http requests using youtube-dl\n\n"
             output += "USAGE:\n"
-            output += "http://localhost:49149/url=<URL VIDEO>\n\n"
+            output += "http://localhost:49149/<URL VIDEO>\n\n"
             output += "LINKS:\n"
             output += "[youtube-dl](https://github.com/rg3/youtube-dl)\n"
-            output += "[youtube-dl-simple-server](https://github.com/r4mos/youtube-dl-simple-server)\n\n"
-            output += "LICENSE:\n"
-            output += open('LICENSE','rb').read()
+            output += "[youtube-dl-simple-server](https://github.com/r4mos/youtube-dl-simple-server)"
             self.wfile.write(output)
 
         return
