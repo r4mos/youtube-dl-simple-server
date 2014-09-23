@@ -10,7 +10,7 @@ python 2.7. I haven't tested on other versions (for now)
 
 # DESCRIPTION
 It is a HTTP server that responds GET requests like:
-http://localhost:49149/<URL VIDEO>
+http://localhost:49149/URL VIDEO
 
 And start downloading.
 
