@@ -1,7 +1,7 @@
 youtube-dl-simple-server - download videos from some video platforms via http requests using youtube-dl
 
 # USAGE
-**youtube-dl-simple-server** [OPTIONS]
+**youtube-dl-simple-server** [-h] [-v] [-u] [-p PORT] [--verbose]
 
 # REQUIEREMENTS
 Linux platform (for now)
@@ -15,12 +15,15 @@ http://localhost:49149/URL VIDEO
 And start downloading.
 
 # OPTIONS
--h, --help     show this help message and exit
+-h, --help            show this help message and exit
 
--v, --version  show program's version number and exit
+-v, --version         show program's version number and exit
 
---verbose      show what the program is doing
+-u, --update          update or install youtube-dl and exit (needs root)
+                        
+-p PORT, --port PORT  select server listening port (49149 by default)
 
+--verbose             show what the program is doing
 
 # LINKS
 [youtube-dl](https://github.com/rg3/youtube-dl)
