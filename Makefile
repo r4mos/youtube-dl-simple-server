@@ -13,6 +13,7 @@ run: pack
 
 install: pack
 	mv youtube-dl-simple-server /usr/local/bin/youtube-dl-simple-server
+	youtube-dl-simple-server -u
 
 uninstall:
 	rm -f /usr/local/bin/youtube-dl-simple-server
