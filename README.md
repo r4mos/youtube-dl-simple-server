@@ -12,9 +12,7 @@ python 2.7. I haven't tested on other versions (for now)
 It is a HTTP server that responds GET requests like:
 http://localhost:49149/<URL VIDEO>
 
-If video's URL works with youtube-dl, displays a button for starting download. If not, is notified with a message like "Download not available".
-
-This server is designed to work with one browser plugin for users.
+And start downloading.
 
 # OPTIONS
 -h, --help     show this help message and exit

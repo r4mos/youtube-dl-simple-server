@@ -18,7 +18,7 @@ class Initialization ():
             self.downloadYdlLatest()
 
         self.show('\nChecking youtube-dl version')
-        version = subprocess.check_output(["youtube-dl", "--version"]).replace("\n", '')
+        version = subprocess.check_output(['youtube-dl', '--version']).replace('\n', '')
         latestVersion = self.getVersionYdlLatest()
         self.show(' - Latest youtube-dl ' + latestVersion)
         self.show(' - Yours  youtube-dl ' + version)
@@ -41,7 +41,7 @@ class Initialization ():
         else:
             self.show('Downloading youtube-dl')
             try:
-                latest = urllib2.urlopen("https://yt-dl.org/latest/youtube-dl")
+                latest = urllib2.urlopen('https://yt-dl.org/latest/youtube-dl')
             except:
                 self.show('No Internet connexion')
                 sys.exit(1)
@@ -50,14 +50,14 @@ class Initialization ():
             output.close()
 
             self.show('Changing permissions to youtube-dl')
-            subprocess.check_output(["chmod", "a+x", "/usr/local/bin/youtube-dl"])
+            subprocess.check_output(['chmod', 'a+x', '/usr/local/bin/youtube-dl'])
 
             self.show('\nRestart youtube-dl-simple-server')
             sys.exit(0)
 
     def getVersionYdlLatest (self):
         try:
-            latestVersion = urllib2.urlopen("https://yt-dl.org/latest/version").read()
+            latestVersion = urllib2.urlopen('https://yt-dl.org/latest/version').read()
         except:
             self.show('No Internet connexion')
             sys.exit(1)
