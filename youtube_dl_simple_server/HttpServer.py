@@ -44,7 +44,7 @@ class HttpServerHandler (BaseHTTPRequestHandler):
                 self.end_headers()
                 self.wfile.write('<h2>Unsupported url</h2>')
                 self.wfile.write('<p>youtube-dl can\'t find video URL</p>')
-                self.wfile.write('<p>try updating. Write in terminal: sudo youtube-dl -U</p>')
+                self.wfile.write('<p>Try updating. Write in terminal: sudo youtube-dl -U</p>')
         
         else:
             self.send_header('Content-type', 'text/html')
