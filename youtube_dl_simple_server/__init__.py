@@ -32,8 +32,8 @@ def main():
 def update(v):
     show('Updating\n', v)
     if (os.geteuid() != 0):
-        show('You need root permss for install. Try this:', v)
-        show('sudo !!', v)
+        print 'You need root permss for install. Try this:'
+        print 'sudo !!'
         sys.exit(1)
     else:
         show('Downloading latest version', v)
@@ -49,7 +49,7 @@ def update(v):
         show('Changing permissions', v)
         subprocess.check_output(['chmod', 'a+x', '/usr/local/bin/youtube-dl'])
 
-        show('\nUpdated successfully', v)
+        print '\nUpdated successfully'
         sys.exit(0)
 
 def checkYoutubedl(v):

@@ -11,7 +11,7 @@ from SocketServer import ThreadingMixIn
 class ThreadedHTTPServer(ThreadingMixIn, HTTPServer):
     """Handle requests in a separate thread."""
 
-class HttpServerHandler (BaseHTTPRequestHandler):
+class HttpServerHandler(BaseHTTPRequestHandler):
     def do_GET (self):
         self.send_response(200)  
         if (re.match('/http(.+)', self.path)):
@@ -44,7 +44,7 @@ class HttpServerHandler (BaseHTTPRequestHandler):
                 self.end_headers()
                 self.wfile.write('<h2>Unsupported url</h2>')
                 self.wfile.write('<p>youtube-dl can\'t find video URL</p>')
-                self.wfile.write('<p>Try updating. Write in terminal: sudo youtube-dl -U</p>')
+                self.wfile.write('<p>Try updating</p>')
         
         else:
             self.send_header('Content-type', 'text/html')
