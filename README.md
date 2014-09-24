@@ -35,12 +35,13 @@ It's coming soon
 ## CHROME-CHROMIUM PLUGIN
 First [download crx file](https://github.com/r4mos/youtube-dl-simple-server/raw/master/bin/plugin/chrome-chromium/chrome-chromium.crx).
 
-Second, open chrome or chromiun with --enable-easy-off-store-extension-install flag.
+Second, open chrome or chromiun with --enable-easy-off-store-extension-install flag. For example, in Chromium:
 
-    For example: 
     chromium-browser --enable-easy-off-store-extension-install
 
-Then, open the extensions page ([chrome://extensions/](chrome://extensions/)) and drag and drop crx file
+If you use Windows, you should add flag in the shortcut
+
+Then, open the extensions page (chrome://extensions) and drag and drop crx file
 
 Finally, accept installation
 
