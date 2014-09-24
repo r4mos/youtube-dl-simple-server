@@ -55,8 +55,9 @@ def update(v):
 def checkYoutubedl(v):
     show('Cheecking youtube-dl\n', v)
     if (not os.path.exists('/usr/local/bin/youtube-dl')):
-        show('You need youtube-dl to catch links. Try this:', v)
-        show('sudo youtube-dl-simple-server -u', v)
+        print 'You need youtube-dl to catch links. Try this:'
+        print 'sudo youtube-dl-simple-server -u'
+        sys.exit(1)
     else:
         show('Cheecking youtube-dl version', v)
         version = subprocess.check_output(['youtube-dl', '--version']).replace('\n', '')
@@ -80,5 +81,5 @@ def show (s, v):
     if (v):
         print s
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
