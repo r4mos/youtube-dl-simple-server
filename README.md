@@ -4,8 +4,6 @@ youtube-dl-simple-server - download videos from some video platforms via http re
 **youtube-dl-simple-server** [-h] [-v] [-u] [-p PORT] [--verbose]
 
 # REQUIEREMENTS
-Linux platform (for now)
-
 python 2.7. I haven't tested on other versions (for now)
 
 # DESCRIPTION

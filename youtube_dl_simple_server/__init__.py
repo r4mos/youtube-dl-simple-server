@@ -21,7 +21,8 @@ def main():
     args = parser.parse_args()
 
     try:
-        paths = Paths() 
+        paths = Paths()
+
         if (args.update):
             update(paths, args.verbose)
         else:
@@ -66,7 +67,7 @@ def checkYoutubedl(paths, v):
             latestVersion = urllib2.urlopen('https://yt-dl.org/latest/version').read()
             show(' - Latest ' + latestVersion, v)
             show(' - Yours  ' + version, v)
-            if version != latestVersion:
+            if not latestVersion in version:
                 _update(paths, v)
         except:
             show('\nNo Internet connexion', v)
