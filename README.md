@@ -10,15 +10,39 @@ http://localhost:49149/URL VIDEO
 And start downloading.
 
 # OPTIONS
--h, --help            show this help message and exit
+    -h, --help            show this help message and exit
+    -v, --version         show program's version number and exit
+    -u, --update          update or install youtube-dl and exit
+    -p PORT, --port PORT  select server listening port (49149 by default)
+    --verbose             show what the program is doing
 
--v, --version         show program's version number and exit
+# INSTALLATION
+To function only need to install the server for your platform, but browser plugin makes it easier download videos
 
--u, --update          update or install youtube-dl and exit
-                        
--p PORT, --port PORT  select server listening port (49149 by default)
+## LINUX SERVER
+Download the installer, give execute permissions, run it and finally you can delete it:
 
---verbose             show what the program is doing
+    wget https://raw.githubusercontent.com/r4mos/youtube-dl-simple-server/master/installation/server-linux.py
+    chmod +x server-linux.py
+    ./server-linux.py
+    rm server-linux.py
+
+When you restart, it works
+
+## WINDOWS SERVER
+It's coming soon
+
+## CHROME-CHROMIUM PLUGIN
+First [download crx file](https://github.com/r4mos/youtube-dl-simple-server/raw/master/bin/plugin/chrome-chromium/chrome-chromium.crx).
+
+Second, open chrome or chromiun with --enable-easy-off-store-extension-install flag.
+
+    For example: 
+    chromium-browser --enable-easy-off-store-extension-install
+
+Then, open the extensions page ([chrome://extensions/](chrome://extensions/)) and drag and drop crx file
+
+Finally, accept installation
 
 # COMPILE
 Linux: make
