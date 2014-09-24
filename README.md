@@ -3,9 +3,6 @@ youtube-dl-simple-server - download videos from some video platforms via http re
 # USAGE
 **youtube-dl-simple-server** [-h] [-v] [-u] [-p PORT] [--verbose]
 
-# REQUIEREMENTS
-python 2.7. I haven't tested on other versions (for now)
-
 # DESCRIPTION
 It is a HTTP server that responds GET requests like:
 http://localhost:49149/URL VIDEO
@@ -22,6 +19,11 @@ And start downloading.
 -p PORT, --port PORT  select server listening port (49149 by default)
 
 --verbose             show what the program is doing
+
+# COMPILE
+Linux: make
+
+Windows: python setup.py py2exe
 
 # LINKS
 [youtube-dl](https://github.com/rg3/youtube-dl)

@@ -12,6 +12,7 @@ import subprocess
 from argparse import ArgumentParser, RawTextHelpFormatter
 from Paths import Paths
 from HttpServer import HttpServerHandler, HttpServerThread
+
 def main():
     parser = ArgumentParser(description='Download videos from some video platforms via http requests using youtube-dl', formatter_class=RawTextHelpFormatter)
     parser.add_argument('-v', '--version', action='version', version=__version__)
