@@ -1,0 +1,6 @@
+Init chrome or chromiun with --enable-easy-off-store-extension-install flag.
+
+For example:
+chromium-browser --enable-easy-off-store-extension-install
+
+Then, open the extensions page and drag and drop .crx file
