@@ -23,7 +23,7 @@ And start downloading.
 # COMPILE
 Linux: make
 
-Windows: python setup.py py2exe
+Windows: python setup.py py2exe (needs [py2exe](http://www.py2exe.org/))
 
 # LINKS
 [youtube-dl](https://github.com/rg3/youtube-dl)
