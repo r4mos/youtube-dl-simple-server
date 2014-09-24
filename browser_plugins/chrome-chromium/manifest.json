@@ -1,0 +1,16 @@
+{
+  "name": "youtube-dl-simple-server browser plugin",
+  "description": "Adds a button to run youtube-dl-simple-server",
+  "version": "0.1",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*"
+  ],
+  "browser_action": {
+      "default_title": "Try to download this video",
+      "default_icon": "ybp_16x16.png"
+  },
+  "manifest_version": 2
+}
