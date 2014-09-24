@@ -11,12 +11,5 @@ pack:
 run: pack
 	./youtube-dl-simple-server --verbose
 
-install: pack
-	mv youtube-dl-simple-server /usr/local/bin/youtube-dl-simple-server
-	youtube-dl-simple-server -u
-
-uninstall:
-	rm -f /usr/local/bin/youtube-dl-simple-server
-
 clean:
 	rm -f youtube-dl-simple-server

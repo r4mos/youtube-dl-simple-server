@@ -19,7 +19,7 @@ And start downloading.
 
 -v, --version         show program's version number and exit
 
--u, --update          update or install youtube-dl and exit (needs root)
+-u, --update          update or install youtube-dl and exit
                         
 -p PORT, --port PORT  select server listening port (49149 by default)
 

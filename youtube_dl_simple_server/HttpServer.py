@@ -5,10 +5,11 @@ import re
 import subprocess
 import urllib2
 import threading
+from Paths import Paths
 from BaseHTTPServer import HTTPServer, BaseHTTPRequestHandler
 from SocketServer import ThreadingMixIn
 
-class ThreadedHTTPServer(ThreadingMixIn, HTTPServer):
+class HttpServerThread(ThreadingMixIn, HTTPServer):
     """Handle requests in a separate thread."""
 
 class HttpServerHandler(BaseHTTPRequestHandler):
@@ -18,8 +19,8 @@ class HttpServerHandler(BaseHTTPRequestHandler):
             url = re.findall(r'/(.+)', self.path)[0]
 
             try:
-                outputYoutubeDl = subprocess.check_output(['youtube-dl', '-g', '--get-filename', '--no-playlist', url])
-                
+                outputYoutubeDl = subprocess.check_output([Paths().getYdlLocation(), '-g', '--get-filename', '--no-playlist', url])
+
                 getVars = outputYoutubeDl.split('\n')
                 trueUrl = getVars[0]
                 nameExt = getVars[1]
@@ -44,7 +45,6 @@ class HttpServerHandler(BaseHTTPRequestHandler):
                 self.end_headers()
                 self.wfile.write('<h2>Unsupported url</h2>')
                 self.wfile.write('<p>youtube-dl can\'t find video URL</p>')
-                self.wfile.write('<p>Try updating</p>')
         
         else:
             self.send_header('Content-type', 'text/html')
