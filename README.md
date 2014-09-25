@@ -32,7 +32,7 @@ When you restart, it works
 ## WINDOWS SERVER
 Download the [installer](https://github.com/r4mos/youtube-dl-simple-server/raw/master/installation/server-windows/installer.zip), unzip and execute server-windows.exe
 
-If you haven't Windows on English or Spanish, the server does not autostart
+If you haven't Windows on English or Spanish, it is possible that the server does not autostart
 
 To start it manually run:
 

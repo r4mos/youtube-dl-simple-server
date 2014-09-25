@@ -27,9 +27,11 @@ try:
     #Windows on English
     if os.path.isdir(os.environ['USERPROFILE'] + '\Start Menu\Programs\StartUp'):
         path = os.environ['USERPROFILE'] + '\Start Menu\Programs\StartUp'
+    elif os.path.isdir(os.environ['USERPROFILE'] + '\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup'):
+        path = os.environ['USERPROFILE'] + '\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup'
     #Windows on Spanish
     elif os.path.isdir(os.environ['USERPROFILE'] + '\Menú Inicio\Programs\StartUp'):
-        path = os.environ['USERPROFILE'] + '\Menú Inicio\Programas\Inicio'
+        path = os.environ['USERPROFILE'] + '\Menú Inicio\Programs\StartUp'
     elif os.path.isdir(os.environ['USERPROFILE'] + '\Menú Inicio\Programas\Inicio'):
         path = os.environ['USERPROFILE'] + '\Menú Inicio\Programas\Inicio'
     else:
