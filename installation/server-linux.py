@@ -26,7 +26,7 @@ try:
 
     print 'Adding to .profile file to autostart'
     profile = open (os.path.expanduser('~') + '/.profile', 'a')
-    profile.write('sleep 5 && ' + serverLocalLocation + ' &\n')
+    profile.write('sleep 20 && ' + serverLocalLocation + ' &\n')
     profile.close()
 
     print '\nCompleted installation but server is stopped'

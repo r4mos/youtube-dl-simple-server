@@ -17,7 +17,7 @@ And start downloading.
     --verbose             show what the program is doing
 
 # INSTALLATION
-To function only need to install the server for your platform, but browser plugin makes it easier download videos
+For function only need install the server for your platform, but browser plugin makes it easier download videos
 
 ## LINUX SERVER
 Download the installer, give execute permissions, run it and finally you can delete it:
