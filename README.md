@@ -30,7 +30,17 @@ Download the installer, give execute permissions, run it and finally you can del
 When you restart, it works
 
 ## WINDOWS SERVER
-It's coming soon
+Download the [installer](https://github.com/r4mos/youtube-dl-simple-server/raw/master/installation/server-windows/installer.zip), unzip and execute server-windows.exe
+
+If you haven't Windows on English or Spanish, the server does not autostart
+
+To start it manually run:
+
+	%APPDATA%\ydlss\youtube-dl-simple-server.exe
+
+To autostart, make a shortcut in "StartUp" (in your start menu) with the following path:
+
+	%APPDATA%\ydlss\hstart.exe /NOCONSOLE "%APPDATA%\ydlss\youtube-dl-simple-server.bat"
 
 ## CHROME-CHROMIUM PLUGIN
 First [download crx file](https://github.com/r4mos/youtube-dl-simple-server/raw/master/bin/plugin/chrome-chromium/chrome-chromium.crx).
