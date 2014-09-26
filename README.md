@@ -43,17 +43,7 @@ To autostart, make a shortcut in "StartUp" (in your start menu) with the followi
 	%APPDATA%\ydlss\hstart.exe /NOCONSOLE "%APPDATA%\ydlss\youtube-dl-simple-server.bat"
 
 ## CHROME-CHROMIUM PLUGIN
-First [download crx file](https://github.com/r4mos/youtube-dl-simple-server/raw/master/bin/plugin/chrome-chromium/chrome-chromium.crx).
-
-Second, open chrome or chromiun with --enable-easy-off-store-extension-install flag. For example, in Chromium:
-
-    chromium-browser --enable-easy-off-store-extension-install
-
-If you use Windows, you should add flag in the shortcut
-
-Then, open the extensions page (chrome://extensions) and drag and drop crx file
-
-Finally, accept installation
+Go to [webstore](https://chrome.google.com/webstore/detail/youtube-dl-simple-server/kpfoekjfnlmomdeipjojapkhhpbgmmoc/) and install
 
 # COMPILE
 Linux: make
