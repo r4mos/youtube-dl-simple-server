@@ -27,7 +27,10 @@ Download the installer, give execute permissions, run it and finally you can del
     ./server-linux.py
     rm server-linux.py
 
-When you restart, it works
+When you restart, it works. You can also start it manually:
+
+    ~/.config/ydlss/youtube-dl-simple-server
+
 
 ## WINDOWS SERVER
 Download the [installer](https://github.com/r4mos/youtube-dl-simple-server/raw/master/installation/server-windows/installer.zip), unzip and execute server-windows.exe

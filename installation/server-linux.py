@@ -29,11 +29,9 @@ try:
     profile.write(serverLocalLocation + ' &\n')
     profile.close()
 
-    print 'Starting server'
+    print '\nCompleted installation but server is stopped'
+    print 'Reboot your computer or start the server manually:'
     print serverLocalLocation + ' --verbose'
-    subprocess.Popen(serverLocalLocation + ' --verbose')
-    
-    print '\nDone.'
 except:
     print 'Fail. An error occurred'
     sys.exit(1)
