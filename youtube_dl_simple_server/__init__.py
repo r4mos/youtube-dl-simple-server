@@ -7,6 +7,7 @@ __version__ = '0.1'
 
 import os
 import sys
+import time
 import urllib2
 import subprocess
 from argparse import ArgumentParser, RawTextHelpFormatter
@@ -40,22 +41,24 @@ def _update(paths, v):
     show('Downloading latest version', v)
     try:
         latest = urllib2.urlopen('https://yt-dl.org/latest/' + paths.getYdlName())
+
+        if not os.path.isdir(paths.getYdlPath()):
+            os.makedirs(paths.getYdlPath())
+
+        output = open(paths.getYdlLocation(), 'wb')
+        output.write(latest.read())
+        output.close()
+
+        if (os.name != 'nt'):
+            show('Changing permissions', v)
+            subprocess.check_output(['chmod', 'a+x', paths.getYdlLocation()])
+
+        print '\nUpdated successfully'
     except:
         show('\nNo Internet connexion', v)
-        sys.exit(1)
-
-    if not os.path.isdir(paths.getYdlPath()):
-        os.makedirs(paths.getYdlPath())
-
-    output = open(paths.getYdlLocation(), 'wb')
-    output.write(latest.read())
-    output.close()
-
-    if (os.name != 'nt'):
-        show('Changing permissions', v)
-        subprocess.check_output(['chmod', 'a+x', paths.getYdlLocation()])
-
-    print '\nUpdated successfully'
+        show('Waiting 10 seconds and retrying', v)
+        time.sleep(10)
+        _update(paths, v)
 
 def checkYoutubedl(paths, v):
     show('Cheecking youtube-dl\n', v)
@@ -72,7 +75,9 @@ def checkYoutubedl(paths, v):
                 _update(paths, v)
         except:
             show('\nNo Internet connexion', v)
-            sys.exit(1)
+            show('Waiting 10 seconds and retrying', v)
+            time.sleep(10)
+            checkYoutubedl(paths, v)
 
 def runServer(port, v):
     show('\nRunning serer at http://localhost:' + str(port), v)
