@@ -31,6 +31,10 @@ When you restart, it works. You can also start it manually:
 
     ~/.config/ydlss/youtube-dl-simple-server
 
+To uninstall, delete the following folder:
+
+    ~/.config/ydlss/
+
 
 ## WINDOWS SERVER
 Download the [installer](https://github.com/r4mos/youtube-dl-simple-server/raw/master/installation/server-windows/installer.zip), unzip and execute server-windows.exe
@@ -44,6 +48,12 @@ To start it manually run:
 To autostart, make a shortcut in "StartUp" (in your start menu) with the following path:
 
 	%APPDATA%\ydlss\hstart.exe /NOCONSOLE "%APPDATA%\ydlss\youtube-dl-simple-server.bat"
+
+To uninstall, delete the following folder:
+
+    %APPDATA%\ydlss\
+
+If you don't know where is %APPDATA%, visit this [link](https://www.youtube.com/watch?v=iUqsvpWn9bY)
 
 ## CHROME-CHROMIUM PLUGIN
 Go to [webstore](https://chrome.google.com/webstore/detail/youtube-dl-simple-server/kpfoekjfnlmomdeipjojapkhhpbgmmoc/) and install
