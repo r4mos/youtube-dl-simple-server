@@ -1,3 +1,11 @@
 chrome.browserAction.onClicked.addListener(function(tab) {
-	chrome.tabs.update(tab.id, {url: "http://localhost:49149/" + tab.url});
+  server = 'localhost';
+  port = '49149'
+
+  if (typeof(localStorage['ydlssServer']) != "undefined")
+    server = localStorage['ydlssServer'];
+  if (typeof(localStorage['ydlssPort']) != "undefined")
+    port = localStorage['ydlssPort'];
+
+  chrome.tabs.update(tab.id, {url: "http://" + server + ":" + port + "/" + tab.url});
 });
