@@ -35,13 +35,11 @@ When you restart, it works. You can also start it manually:
 ## WINDOWS SERVER
 Download the [installer](https://github.com/r4mos/youtube-dl-simple-server/raw/master/installation/server-windows/installer.zip), unzip and execute server-windows.exe
 
-If you haven't Windows on English or Spanish, it is possible that the server does not autostart
-
-To start it manually run:
+When you restart, it works. You can also start it manually:
 
 	%APPDATA%\ydlss\youtube-dl-simple-server.exe
 
-To autostart, make a shortcut in "StartUp" (in your start menu) with the following path:
+If you haven't Windows on English or Spanish, it is possible that the server doesn't autostart. Make a shortcut in "StartUp" (in your start menu) with the following path:
 
 	%APPDATA%\ydlss\hstart.exe /NOCONSOLE "%APPDATA%\ydlss\youtube-dl-simple-server.bat"
 
