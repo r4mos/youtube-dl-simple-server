@@ -3,7 +3,7 @@
 
 __author__  = 'Carlos Ramos'
 __license__ = 'The MIT License'
-__version__ = '0.1'
+__version__ = '0.2'
 
 import os
 import sys
@@ -81,7 +81,7 @@ def checkYoutubedl(paths, v):
 
 def runServer(port, v):
     show('\nRunning serer at http://localhost:' + str(port), v)
-    httpd = HttpServerThread(('localhost', port), HttpServerHandler)
+    httpd = HttpServerThread(('0.0.0.0', port), HttpServerHandler)
     httpd.serve_forever()
 
 def show (s, v):
