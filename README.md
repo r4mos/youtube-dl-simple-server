@@ -1,7 +1,7 @@
 youtube-dl-simple-server - download videos from some video platforms via http requests using youtube-dl
 
 # USAGE
-**youtube-dl-simple-server** [-h] [-v] [-u] [-p PORT] [--verbose]
+**youtube-dl-simple-server** [-h] [-v] [-u] [-s SERVER] [-p PORT] [--verbose]
 
 # DESCRIPTION
 It is a HTTP server that responds GET requests like:
