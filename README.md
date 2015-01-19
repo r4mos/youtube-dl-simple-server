@@ -10,13 +10,13 @@ http://localhost:49149/URL VIDEO
 And start downloading.
 
 # OPTIONS
-  -h, --help            show this help message and exit
-  -v, --version         show program's version number and exit
-  -u, --update          update or install youtube-dl and exit               
-  -s SERVER, --server SERVER
+    -h, --help            show this help message and exit
+    -v, --version         show program's version number and exit
+    -u, --update          update or install youtube-dl and exit
+    -s SERVER, --server SERVER
                         select server (localhost by default)
-  -p PORT, --port PORT  select server listening port (49149 by default)
-  --verbose             show what the program is doing
+    -p PORT, --port PORT  select server listening port (49149 by default)
+    --verbose             show what the program is doing
 
 # INSTALLATION
 For function only need install the server for your platform, but browser plugin makes it easier download videos
