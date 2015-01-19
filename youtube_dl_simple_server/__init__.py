@@ -18,6 +18,7 @@ def main():
     parser = ArgumentParser(description='Download videos from some video platforms via http requests using youtube-dl', formatter_class=RawTextHelpFormatter)
     parser.add_argument('-v', '--version', action='version', version=__version__)
     parser.add_argument('-u', '--update', action='store_true', help='update or install youtube-dl and exit\n\n')
+    parser.add_argument('-s', '--server', type=str, default='localhost', help='select server (localhost by default)')
     parser.add_argument('-p', '--port', type=int, default=49149, help='select server listening port (49149 by default)')
     parser.add_argument('--verbose', action='store_true', help='show what the program is doing')
     args = parser.parse_args()
@@ -29,7 +30,7 @@ def main():
             update(paths, args.verbose)
         else:
             checkYoutubedl(paths, args.verbose)
-            runServer(args.port, args.verbose)
+            runServer(args.server, args.port, args.verbose)
     except KeyboardInterrupt:
         sys.exit(0)
 
@@ -79,9 +80,9 @@ def checkYoutubedl(paths, v):
             time.sleep(10)
             checkYoutubedl(paths, v)
 
-def runServer(port, v):
+def runServer(server, port, v):
     show('\nRunning serer at http://localhost:' + str(port), v)
-    httpd = HttpServerThread(('0.0.0.0', port), HttpServerHandler)
+    httpd = HttpServerThread((server, port), HttpServerHandler)
     httpd.serve_forever()
 
 def show (s, v):
