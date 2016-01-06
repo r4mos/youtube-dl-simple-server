@@ -9,7 +9,7 @@ installationPath = os.environ['APPDATA'] + '\ydlss'
 serverLocalLocation = installationPath + '\youtube-dl-simple-server.exe'
 
 serverWebLocation = 'https://github.com/r4mos/youtube-dl-simple-server/raw/master/bin/server/windows/'
-serverWebFiles = {'__init__.exe', 'hstart.exe', 'youtube-dl-simple-server.exe', '_hashlib.pyd', '_socket.pyd', '_ssl.pyd', 'bz2.pyd', 'library.zip', 'python27.dll', 'select.pyd', 'unicodedata.pyd', 'w9xpopen.exe', 'youtube-dl-simple-server.bat'}
+serverWebFiles = {'hstart.exe', 'youtube-dl-simple-server.exe', '_hashlib.pyd', '_socket.pyd', '_ssl.pyd', 'bz2.pyd', 'library.zip', 'python27.dll', 'select.pyd', 'unicodedata.pyd', 'w9xpopen.exe', 'youtube-dl-simple-server.bat'}
 
 try:
     print 'Cheeking installation folder'
@@ -22,7 +22,7 @@ try:
         output = open(installationPath + '\\' + f, 'wb')
         output.write(latest.read())
         output.close()
-    
+
     print 'Adding to Init folder to autostart'
     #Windows on English
     if os.path.isdir(os.environ['USERPROFILE'] + '\Start Menu\Programs\StartUp'):
@@ -30,10 +30,10 @@ try:
     elif os.path.isdir(os.environ['USERPROFILE'] + '\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup'):
         path = os.environ['USERPROFILE'] + '\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup'
     #Windows on Spanish
-    elif os.path.isdir(os.environ['USERPROFILE'] + '\Menú Inicio\Programs\StartUp'):
-        path = os.environ['USERPROFILE'] + '\Menú Inicio\Programs\StartUp'
-    elif os.path.isdir(os.environ['USERPROFILE'] + '\Menú Inicio\Programas\Inicio'):
-        path = os.environ['USERPROFILE'] + '\Menú Inicio\Programas\Inicio'
+    elif os.path.isdir(os.environ['USERPROFILE'] + '\Menï¿½ Inicio\Programs\StartUp'):
+        path = os.environ['USERPROFILE'] + '\Menï¿½ Inicio\Programs\StartUp'
+    elif os.path.isdir(os.environ['USERPROFILE'] + '\Menï¿½ Inicio\Programas\Inicio'):
+        path = os.environ['USERPROFILE'] + '\Menï¿½ Inicio\Programas\Inicio'
     else:
         path = ''
 

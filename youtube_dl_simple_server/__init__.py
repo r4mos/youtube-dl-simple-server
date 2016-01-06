@@ -41,7 +41,7 @@ def update(paths, v):
 def _update(paths, v):
     show('Downloading latest version', v)
     try:
-        latest = urllib2.urlopen('https://yt-dl.org/latest/' + paths.getYdlName())
+        latest = urllib2.urlopen('https://yt-dl.org/latest/' + paths.getYdlName(), context=paths.getSslCtx())
 
         if not os.path.isdir(paths.getYdlPath()):
             os.makedirs(paths.getYdlPath())
@@ -69,7 +69,7 @@ def checkYoutubedl(paths, v):
         show('Cheecking youtube-dl version', v)
         version = subprocess.check_output([paths.getYdlLocation(), '--version']).replace('\n', '')
         try:
-            latestVersion = urllib2.urlopen('https://yt-dl.org/latest/version').read()
+            latestVersion = urllib2.urlopen('https://yt-dl.org/latest/version', context=paths.getSslCtx()).read()
             show(' - Latest ' + latestVersion, v)
             show(' - Yours  ' + version, v)
             if not latestVersion in version:
