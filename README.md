@@ -58,7 +58,14 @@ To uninstall, delete the following folder:
 If you don't know where is %APPDATA%, visit this [link](https://www.youtube.com/watch?v=iUqsvpWn9bY)
 
 ## CHROME-CHROMIUM PLUGIN
-Go to [webstore](https://chrome.google.com/webstore/detail/youtube-dl-simple-server/kpfoekjfnlmomdeipjojapkhhpbgmmoc/) and install
+The plugin was removed from the webstore so only be installed manually.
+
+Init chrome or chromiun with --enable-easy-off-store-extension-install flag.
+
+For example:
+chromium-browser --enable-easy-off-store-extension-install
+
+Then, open [the extensions page](chrome://extensions/) and drag and drop [.crx file](https://github.com/r4mos/youtube-dl-simple-server/raw/master/bin/plugin/chrome-chromium/chrome-chromium.crx)
 
 # COMPILE
 Linux: make
